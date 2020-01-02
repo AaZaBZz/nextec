@@ -32,7 +32,7 @@ INTERSECT
 SELECT employee_id,job_id
 FROM job_history;
 
-SELECT last_name,department_id
+SELECT department_id,last_name
 FROM employees
 UNION
 SELECT department_id,department_name
