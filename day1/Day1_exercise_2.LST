@@ -155,12 +155,6 @@ EMPLOYEE_ID LAST_NAME                 JOB_ID     STARTDATE
 
 107 rows selected.
 
-SQL> save E:\Srish_Lab\Deloitte_Assignments\pract1_1.sql;
-Created file E:\Srish_Lab\Deloitte_Assignments\pract1_1.sql
-SQL> @ pract1_1.sql;
-SP2-0310: unable to open file "pract1_1.sql"
-SQL> @ E:\Srish_Lab\Deloitte_Assignments\pract1_1.sql;
-
 EMPLOYEE_ID LAST_NAME                 JOB_ID     STARTDATE                      
 ----------- ------------------------- ---------- ---------                      
         100 King                      AD_PRES    17-JUN-03                      
@@ -300,13 +294,6 @@ EMPLOYEE_ID LAST_NAME                 JOB_ID     STARTDATE
 
 107 rows selected.
 
-SQL> select distict job_id from employees;
-select distict job_id from employees
-       *
-ERROR at line 1:
-ORA-00904: "DISTICT": invalid identifier 
-
-
 SQL> select distinct job_id from employees;
 
 JOB_ID                                                                          
@@ -335,21 +322,6 @@ ST_CLERK
 ST_MAN                                                                          
 
 19 rows selected.
-
-SQL> 
-SQL> select employee_id, last_name, job_id, hire_date as startdate
-  2  ;
-
-*
-ERROR at line 2:
-ORA-00923: FROM keyword not found where expected 
-
-
-SQL> select employee_id as 'Emp #', last_name'Employee', job_id 'Job', hire_date as 'Hire Date' from employees;
-select employee_id as 'Emp #', last_name'Employee', job_id 'Job', hire_date as 'Hire Date' from employees
-                      *
-ERROR at line 1:
-ORA-00923: FROM keyword not found where expected 
 
 
 SQL> select employee_id as "Emp #", last_name as "Employee", job_id as "Job", hire_date as "Hire Date" from employees;
