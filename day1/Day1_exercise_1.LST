@@ -13,13 +13,10 @@ Higgins                        12008
 
 8 rows selected.
 
-SQL> save E:\Srish_Lab\Deloitte_Assignments\prac2_1.sql;
-Created file E:\Srish_Lab\Deloitte_Assignments\prac2_1.sql
-SQL> @ E:\Srish_Lab\Deloitte_Assignments\prac2_1.sql;
 
 LAST_NAME                     SALARY                                            
 ------------------------- ----------                                            
-King                           24000                                            
+King                           24000                                           
 Kochhar                        17000                                            
 De Haan                        17000                                            
 Greenberg                      12008                                            
@@ -115,10 +112,6 @@ Higgins                        12008
 
 57 rows selected.
 
-SQL> save E:\Srish_Lab\Deloitte_Assignments\pract2_2.sql;
-Created file E:\Srish_Lab\Deloitte_Assignments\pract2_2.sql
-SQL> @ E:\Srish_Lab\Deloitte_Assignments\pract2_2.sql;
-
 LAST_NAME                     SALARY                                            
 ------------------------- ----------                                            
 King                           24000                                            
@@ -196,12 +189,6 @@ Higgins                        12008
 
 57 rows selected.
 
-SQL> select last_name, job_id, hire_date as "tart
-  2  ;
-ERROR:
-ORA-01740: missing double quote in identifier 
-
-
 SQL> select last_name, job_id, hire_date as "Start Date" from employees
   2  where hire_date between to_date('20/02/2011', 'DD/MM/YYYY') and to_date('01/05/2012', 'DD/MM/YYYY')
   3  order by hire_date;
@@ -276,13 +263,6 @@ Weiss                                50
 
 47 rows selected.
 
-SQL> select last_name,salary from employees
-  2  where salary between 5000 and 12000 AND department_id in (20,;
-where salary between 5000 and 12000 AND department_id in (20,
-                                                            *
-ERROR at line 2:
-ORA-00936: missing expression 
-
 
 SQL> select last_name as "Employee", salary as "MonthlySalary" from employees
   2  where salary between 5000 and 12000 AND department_id in (20, 50);
@@ -297,10 +277,6 @@ Mourgos                            5800
 Fay                                6000                                         
 
 6 rows selected.
-
-SQL> save E:\Srish_Lab\Deloitte_Assignments\prac2_3.sql;
-Created file E:\Srish_Lab\Deloitte_Assignments\prac2_3.sql
-SQL> @ E:\Srish_Lab\Deloitte_Assignments\prac2_3.sql;
 
 Employee                  MonthlySalary                                         
 ------------------------- -------------                                         
@@ -324,23 +300,6 @@ SQL> select last_name, job_id from employees
 LAST_NAME                 JOB_ID                                                
 ------------------------- ----------                                            
 King                      AD_PRES                                               
-
-SQL> select last_name, salary, commissions from employees
-  2  where commissions IS NOT NULL
-  3  order by salary desc, commissions;
-where commissions IS NOT NULL
-      *
-ERROR at line 2:
-ORA-00904: "COMMISSIONS": invalid identifier 
-
-
-SQL> select last_name, salary, commission from employees
-  2  where commission IS NOT NULL
-  3  order by salary desc, commission;
-where commission IS NOT NULL
-      *
-ERROR at line 2:
-ORA-00904: "COMMISSION": invalid identifier 
 
 
 SQL> 
@@ -439,10 +398,6 @@ Taylor                          8600             .2
 Livingston                      8400             .2                             
 
 7 rows selected.
-
-SQL> save E:\Srish_Lab\Deloitte_Assignments\lab2_4.sql;
-Created file E:\Srish_Lab\Deloitte_Assignments\lab2_4.sql
-SQL> @ E:\Srish_Lab\Deloitte_Assignments\lab2_4.sql;
 
 LAST_NAME                     SALARY COMMISSION_PCT                             
 ------------------------- ---------- --------------                             
